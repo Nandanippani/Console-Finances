@@ -108,13 +108,44 @@ for (var i = 0; i < finances.length; i++) {
 console.log(profit);
 console.log(loss);
 
-var net_total = profit - loss;
+var net_total = profit + loss;
 console.log(net_total);
 
 // The average of the **changes** in Profit/Losses over the entire period
 
-var changes = 0;
+var totalChanges = 0;
+
+
+changes = [];
+
 
 for (var i = 0; i < finances.length; i++) {
 
+    if (i + 1 < finances.length) {
+        var first_month = finances[i][1];
+        var next_month = finances[i + 1][1];
+
+        var change = next_month - first_month;
+
+        var obj = new Object();
+        obj.month = finances[i + 1][0];
+        obj.value = change;
+
+        changes.push(obj);
+
+        totalChanges += change;
+    }
 }
+
+changes.sort((a, b) => a.value - b.value);
+
+var gtDec = changes[0];
+var gtInc = changes[changes.length - 1];
+
+console.log((totalChanges / (finances.length - 1)).toFixed(2));
+console.log(changes);
+console.log(gtInc);
+console.log(gtDec);
+
+
+
