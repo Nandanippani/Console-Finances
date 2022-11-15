@@ -36,6 +36,11 @@ Then added this object to an empty monthlyChanges array, sorted this array in as
 
 ![Alt text](images/gtInc_gtDec.PNG)
 
+* Output looks in console as below
+
+![Alt text](images/console-output.PNG)
+
+
 ### The URL of the deployed application
 
 https://nandanippani.github.io/Console-Finances/   

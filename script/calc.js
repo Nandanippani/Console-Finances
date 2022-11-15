@@ -47,14 +47,17 @@ monthlyChanges.sort((a, b) => a.value - b.value); // Here sorted monthlyChanges 
 var gtDec = monthlyChanges[0];                 // Assigned gratest decrease in changes to variable gtDec.
 var gtInc = monthlyChanges[monthlyChanges.length - 1]; //Assigned gratest increase in changes to gtInc.
 
-console.log(`Financial Analysis                               
+
+var output = `Financial Analysis                               
 --------------------------------------------------------              
 Total Months: ${total_months}
 Total: $${net_total}
 Average  Change: $${(totalChanges / (finances.length - 1)).toFixed(2)}
 Greatest Increase in Profits: ${gtInc.month} ($${gtInc.value})
 Greatest Decrease in Profits: ${gtDec.month} ($${gtDec.value})
-`)
+`
+
+console.log(output);
 
 // Above console.log shows output as mentioned in the readme file.
 
