@@ -38,9 +38,12 @@ Then added this object to an empty monthlyChanges array, sorted this array in as
 
 ### The URL of the deployed application
 
+https://nandanippani.github.io/Console-Finances/   
+
 
 ### The URL of the GitHub repository that contains my code
 
+https://github.com/Nandanippani/Console-Finances
 
 
 ## Installation
